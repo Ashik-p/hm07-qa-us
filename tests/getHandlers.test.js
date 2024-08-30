@@ -12,7 +12,7 @@ test('Return status code should be 200', async () => {
 	expect(actualStatus).toBe(200);
 });
 
-//Test 2
+//Test 2: Checking the courier section contains "Fast Delivery" option
 test('Body should contain name = "Fast Delivery"', async () => {
 	let actualResponseBody;
 	try {

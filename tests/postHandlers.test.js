@@ -10,6 +10,7 @@ const requestBody = {
 	
 }
 
+//Test 1
 test('Status code should be 200 OK', async () => {
 	let actualStatus;
     try {
@@ -29,7 +30,7 @@ test('Status code should be 200 OK', async () => {
 });
 
 
-
+//Test 2
 test('Verify response body contains "Fresh Food"', async () => {
 	let actualResponseBody;
     try {
@@ -47,6 +48,7 @@ test('Verify response body contains "Fresh Food"', async () => {
 	expect(actualResponseBody).toHaveProperty("Fresh Food");
 });
 
+//Test 3
 test('Verify the products in "Fresh Food"', async () => {
 	let actualResponseBody;
     try {
