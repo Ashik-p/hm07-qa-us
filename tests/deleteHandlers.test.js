@@ -1,30 +1,41 @@
 const config = require('../config');
 
-//Test 1
+//DELETE Test 1 : Verify the status code is 200 when deleting
 test('Ensure the status code is 200', async () => {
+	{ const requestBody = {
+		card : 7,
+		name : "Pet Supplies"
+	}
+		const response = await fetch(`${config.API_URL}/api/v1/kits`, {
+			method: 'POST',
+			headers: {
+			'Content-Type': 'application/json'
+			},
+			body: JSON.stringify(requestBody)
+		});
+	}
+
 	let actualStatus;
     try {
-		const response = await fetch(`${config.API_URL}/api/v1/kits/3`, {
+		const response = await fetch(`${config.API_URL}/api/v1/kits/7`, {
 			method: 'DELETE',
 		});
 		actualStatus = response.status;
-		console.log(data);
 	} catch (error) {
 		console.error(error);
 	}
 	expect(actualStatus).toBe(200);
 });
 
-//Test 2
+//DELETE Test 2 : Check the body response expected result when deleting the existent kit 
 test('Ensure the body responses with "ok": true', async () => {
 	let actualResponseBody;
     try {
-		const response = await fetch(`${config.API_URL}/api/v1/kits/3`, {
+		const response = await fetch(`${config.API_URL}/api/v1/kits/7`, {
 			method: 'DELETE',
 		});
 		actualStatus = response.status;
 		actualResponseBody = await response.json();
-		console.log(data);
 	} catch (error) {
 		console.error(error);
 	}

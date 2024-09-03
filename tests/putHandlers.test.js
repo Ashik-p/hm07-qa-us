@@ -10,7 +10,7 @@ const requestBody = {
 		]
 }
 
-//Test 1
+//PUT Test 1 : Ensure the response status of the existent kit display 200 OK status code
 test('Check the status code is 200', async () => {
 	let actualStatus;
     try {
@@ -31,7 +31,7 @@ test('Check the status code is 200', async () => {
 });
 
 
-//Test 2
+//PUT Test 2 : Verifying the response body gives the correct message
 test('Check the body responses with "ok": true', async () => {
 	let actualResponseBody;
     try {
@@ -51,7 +51,7 @@ test('Check the body responses with "ok": true', async () => {
 	expect(actualResponseBody["ok"]).toBeTruthy();
 });
 
-//Test 3: Reviewing the non-existent kit gives 404 response
+//PUT Test 3: Reviewing the non-existent kit gives 404 response
 test('Check the status code is 404', async () => {
 	let actualStatus;
     try {

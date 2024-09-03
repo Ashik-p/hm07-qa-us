@@ -1,6 +1,6 @@
 const config = require('../config');
 
-//Test 1
+//GET Test 1: Check that if getting a list of deliveries response 200 status code 
 test('Return status code should be 200', async () => {
 	let actualStatus;
 	try {
@@ -12,7 +12,7 @@ test('Return status code should be 200', async () => {
 	expect(actualStatus).toBe(200);
 });
 
-//Test 2: Checking the courier section contains "Fast Delivery" option
+//GET Test 2: Checking the courier section contains "Fast Delivery" option
 test('Body should contain name = "Fast Delivery"', async () => {
 	let actualResponseBody;
 	try {
