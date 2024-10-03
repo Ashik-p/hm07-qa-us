@@ -13,7 +13,8 @@ The tools and technologies used in this project are mentioned below:
 ## Set up the project
 * Link Github account to Tripleten by clicking “Link Github account”.
 * Clone the repository[hm07-qa-us] using by using the command: 
-``` bashgit clone git@github.com:Ashik-p/hm07-qa-us.git
+``` bash
+git clone git@github.com:Ashik-p/hm07-qa-us.git
 ```
 * Open the project folder in VS Code and start with the project.
 
@@ -38,7 +39,7 @@ There are 2 tests in this suite:
 
 
 Run the test in VS code terminal by using the command:
-``` bash
+``` bash 
 npx jest getHandlers.test.js
 ```
 
