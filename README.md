@@ -5,18 +5,16 @@ This project is assigned by Tripleten from Sprint 7 which is aimed to write API 
 
 ## Tools and Technologies
 The tools and technologies used in this project are mentioned below:
-* Language:
-Javascript
-* Platform
-NodeJS 
-* Framework
-Jest
-* Code Editor
-VS Code
+* Language: Javascript
+* Platform: NodeJS 
+* Framework: Jest
+* Code Editor: VS Code
 
 ## Set up the project
 * Link Github account to Tripleten by clicking “Link Github account”.
-* Clone the repository[hm07-qa-us] using by using the command: git clone git@github.com:Ashik-p/hm07-qa-us.git
+* Clone the repository[hm07-qa-us] using by using the command: 
+``` bashgit clone git@github.com:Ashik-p/hm07-qa-us.git
+```
 * Open the project folder in VS Code and start with the project.
 
 ## Urban Grocers Server
@@ -40,7 +38,9 @@ There are 2 tests in this suite:
 
 
 Run the test in VS code terminal by using the command:
+``` bash
 npx jest getHandlers.test.js
+```
 
 #### Task 2: POST request 
 
@@ -55,8 +55,9 @@ There are 2 tests in this suite:
 * Test 3 : Ensure the response body is parsed and contains the anticipated data. 
 
 Run the test in VS code terminal by using the command:
+``` bash 
 npx jest postHandlers.test.js
-
+```
 
 #### Task 3: PUT request 
 
@@ -71,8 +72,9 @@ There are 2 tests in this suite:
 * Test 3 : Ensure the response body is parsed and matches the expected data.
 
 Run the test in VS code terminal by using the command:
+``` bash
 npx jest putHandlers.test.js
-
+```
 
 #### Task 4: DELETE request 
 
@@ -85,4 +87,6 @@ There are 2 tests in this suite:
 * Test 2 : Verify to parse the response body and ensure it contains the expected result.
 
 Run the test in VS code terminal by using the command:
+``` bash
 npx jest deleteHandlers.test.js
+```
