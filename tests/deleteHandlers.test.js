@@ -1,4 +1,4 @@
-const config = require('../config');
+const config = require ('../config');
 
 //Create new resource for POST request
 const requestBody = {
