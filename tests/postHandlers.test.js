@@ -24,7 +24,7 @@ test('Status code should be 200 OK', async () => {
 		actualStatus = response.status;
 	} catch (error) {
 		console.error(error);
-		console.log(data);
+		throw error; // Ensure test fails if there's an error
 	}
 	expect(actualStatus).toBe(200);
 });
@@ -44,6 +44,7 @@ test('Verify response body contains "Fresh Food"', async () => {
 		actualResponseBody = await response.json();
 	} catch (error) {
 		console.error(error);
+		throw error; // Ensure test fails if there's an error
 	}
 	expect(actualResponseBody).toHaveProperty("Fresh Food");
 });
@@ -64,6 +65,12 @@ test('Verify the products in "Fresh Food"', async () => {
 	} 
 	catch (error) {
 		console.error(error);
+		throw error; // Ensure test fails if there's an error
 	}
-	expect(actualResponseBody["Fresh Food"]).toEqual({"Orange Juice - Cold-Pressed, No Added Sugar, Preservative Free": 3,"Sprite Soft Drink": 12});
+	// Validate the exact structure of "Fresh Food"
+    expect(actualResponseBody).toHaveProperty('Fresh Food'); // Check if "Fresh Food" exists
+    expect(actualResponseBody['Fresh Food']).toEqual({
+        'Orange Juice - Cold-Pressed, No Added Sugar, Preservative Free': 3,
+        'Sprite Soft Drink': 12
+    }); // Check if the items match the expected structure
 });
